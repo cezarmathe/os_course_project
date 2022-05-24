@@ -100,7 +100,7 @@ EOF
         "/etc/nginx/sites-available/${name}.conf" \
         "/etc/nginx/sites-enabled/${name}.conf"
     # add the name of this vhosts to the list of known hosts for this machine
-    echo "${name} 127.0.0.1" | sudo tee -a /etc/hosts
+    echo "127.0.0.1 ${name}" | sudo tee -a /etc/hosts
 }
 
 create_nginx_virtual_host "cezarmathe.com"
